@@ -6,24 +6,28 @@ def gauss(input1):
     """Se importan las funciones que nos ayudarán a escalonar la matriz"""
     from MulSumRenglon import MulSumRenglon
     from UnificarRenglon import UnificarRenglon
+    from IntercambioRenglon import IntercambiarRenglon
 
 
     """abrimos el archivo y guardamos los valores en un arreglo"""
     import numpy
     matriz = []
-    matriz= numpy.loadtxt(input1, dtype=int, skiprows=1)
-    print(matriz[0][1])
+    matriz= numpy.loadtxt(input1, dtype=float, skiprows=1)
+    print(matriz)
+    indicadores=[]
+    contenido = open(input1, "r")
+    indicadores=contenido.readline().split()
+    indicadores = list(map(int, indicadores))
+    ecu = indicadores[0]
+    tam = indicadores[1]+1
 
-"""
-    for i in range(1+matriz[0][1]):
-        if(matri[i][i]==0):
-            for e in range(matriz[0][0]):
-                if (matriz[e][i] !=0):
-                    IntercambiarRenglon(matriz, i, e)
-        else:
-            for j in range(i+1, matriz[0][0]):
-                MulSumRenglon(1+matriz[0][1], matriz, i, j, 1)
-                """
+
+    i=0
+    if(matriz[i][i]!=0):
+        for j in range(i, ecu):
+            MulSumRenglon(tam, matriz, i, j, 1)
+        print(matriz)
+
 
 
 input1 = "input1.txt"

@@ -27,3 +27,11 @@ def MulSumRenglon(tam, matriz, r1, r2, direc):
 
         for j in range(tam):
             matriz[r2][j] = (matriz[r2][j]+ aux[j])
+
+            
+MulSumRenglon(4, matriz, 0, 1, 1)
+MulSumRenglon(4, matriz, 0, 2, 1)
+MulSumRenglon(4, matriz, 0, 3, 1)
+MulSumRenglon(4, matriz, 1, 2, 1)
+MulSumRenglon(4, matriz, 1, 3, 1)
+print(matriz)
