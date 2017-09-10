@@ -13,7 +13,7 @@ def gauss(input1):
     import numpy
     matriz = []
     matriz= numpy.loadtxt(input1, dtype=float, skiprows=1)
-    print(matriz)
+
     indicadores=[]
     contenido = open(input1, "r")
     indicadores=contenido.readline().split()
@@ -21,14 +21,17 @@ def gauss(input1):
     ecu = indicadores[0]
     tam = indicadores[1]+1
 
-
     i=0
-    if(matriz[i][i]!=0):
-        for j in range(i, ecu):
+
+    while(i<ecu):
+        j=i+1
+        while(j<ecu):
             MulSumRenglon(tam, matriz, i, j, 1)
-        print(matriz)
+            j=j+1
+        i=i+1
 
 
+    print(matriz)
 
 input1 = "input1.txt"
 gauss(input1)
