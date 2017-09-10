@@ -36,7 +36,7 @@ def gauss(input1):
         # una vez que el pivote es un entero se eliminan los valores debajo de su columna
         j=i+1
         while(j<ecu):
-            MulSumRenglon(tam, matriz, i, j, 1)
+            MulSumRenglon(tam, matriz, i, j)
             j=j+1
         i=i+1
     # guardamosla matriz en un archivo txt output1 con formato .2f
