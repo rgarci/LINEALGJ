@@ -1,6 +1,6 @@
 """esta función multiplica un renglon R1 por una constante y lo suma a otro renglon R2"""
 
-matriz= [[3, 1, 6],[-6, 0, -16],[0, 8, -17]]
+
 
 def MulSumRenglon(tam, matriz, r1, r2, direc):
 

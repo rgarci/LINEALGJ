@@ -19,17 +19,22 @@ def gauss(input1):
     indicadores=contenido.readline().split()
     indicadores = list(map(int, indicadores))
     ecu = indicadores[0]
-    tam = indicadores[1]+1
+    tam = (indicadores[1])+1
 
     i=0
 
     while(i<ecu):
+        if(matriz[i][i]==0):
+            for g in range(i,ecu):
+                if(matriz[g][i]!=0):
+                    IntercambiarRenglon(tam, matriz, i, g)
+                    break
+
         j=i+1
         while(j<ecu):
             MulSumRenglon(tam, matriz, i, j, 1)
             j=j+1
         i=i+1
-
 
     print(matriz)
 
