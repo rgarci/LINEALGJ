@@ -2,6 +2,7 @@
 
 
 def UnificarRenglon(tam, matriz, r):
+    aux=1
     for j in range(tam):
         if (matriz[r][j]!=0):
             aux = matriz[r][j]

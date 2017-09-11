@@ -68,8 +68,7 @@ def gaussjordan(input1):
 
         ###################################
 
-
-    print(ListaMatrices)
+        # Guardamos la lista de matrices en un fichero
     output1=open("output1(GC).txt", "w")
     for elemento in ListaMatrices:
         for renglon in elemento:
