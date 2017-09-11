@@ -28,12 +28,27 @@ def gauss(input1):
 
     while(i<ecu):
         #comprobamos que el pivote no sea cero, de serlo se le intercambiará con el renglón más próximo donde dicho pivote no sea cero
+
         if(matriz[i][i]==0):
             for g in range(i,ecu):
                 if(matriz[g][i]!=0):
                     IntercambiarRenglon(tam, matriz, i, g)
                     break
-            
+
+        if(matriz[i][i]==0):
+            y=i+1
+            while(y<tam):
+                if(matriz[i][y]==0):
+                    g=i+1
+                    while(g<ecu):
+                        if(matriz[g][y]!=0):
+                            IntercambiarRenglon(tam, matriz, i, g)
+                            g=ecu
+                        g=g+1
+                    y=tam
+                y=y+1
+
+
         # una vez que el pivote es un entero se eliminan los valores debajo de su columna
         j=i+1
         while(j<ecu):
